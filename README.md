@@ -10,4 +10,4 @@
 * 下拉框：select2
 
 
-![](http://img.feiyit.com/feiyit/website/club/fyt-adminui.png) 
+![image](http://img.feiyit.com/feiyit/website/club/fyt-adminui.png) 
