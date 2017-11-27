@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="wwwroot/lib/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="wwwroot/lib/css/font-awesome.min.css">
+		<link rel="stylesheet" href="wwwroot/lib/css/toastr.css" />
+		<link href="wwwroot/table/miniui/themes/default/miniui.css" rel="stylesheet" type="text/css">
+		<link href="wwwroot/table/miniui/themes/pure/skin.css" rel="stylesheet" type="text/css">
+		<link href="wwwroot/table/miniui/themes/icons.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="wwwroot/lib/css/style.css" />		
+		<script type="text/javascript" src="wwwroot/lib/js/jquery.min.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/toastr.min.js"></script>
+		<script type="text/javascript" src="wwwroot/table/miniui/miniui.js"></script>
+		<script type="text/javascript" src="wwwroot/layer/layer.js"></script>
+		<script type="text/javascript" src="wwwroot/laydate/laydate.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/fyt-comment.js"></script>
+		<title></title>
+	</head>
+
+	<body>
+
+		<div class="mini-splitter fyt-tow-iframe" style="width:100%;height:100%;">
+			<div size="240" showCollapseButton="true" class="fyt-if-left">
+				<div class="fyt-toolbar" >
+					<span class="tree-top-tip">角色</span>
+				</div>
+				<div class="mini-fit">
+					<div class="fyt-bran-top fyt-tree">
+						<ul>
+							<li>
+								<a href="javascript:void(0)" class="list-text">系统管理员</a>
+								<div class="item-actions">
+									<a href="javascript:void(0)"><span class="fa fa-edit" title="编辑"></span></a>
+									<a href="javascript:void(0)"><span class="fa fa-trash-o" title="删除"></span></a>
+								</div>
+							</li>
+							<li>
+								<a href="javascript:void(0)" class="list-text">测试管理员</a>
+								<div class="item-actions">
+									<a href="javascript:void(0)"><span class="fa fa-edit" title="编辑"></span></a>
+									<a href="javascript:void(0)"><span class="fa fa-trash-o" title="删除"></span></a>
+								</div>
+							</li>
+							<li>
+								<a href="javascript:void(0)" class="list-text">技术负责人</a>
+								<div class="item-actions">
+									<a href="javascript:void(0)"><span class="fa fa-edit" title="编辑"></span></a>
+									<a href="javascript:void(0)"><span class="fa fa-trash-o" title="删除"></span></a>
+								</div>
+							</li>
+						</ul>
+						<div class="fyt-tree-footer">
+							<a id="tows" href="javascript:void(0)"><span><i class="fa fa-plus" title="添加新角色"></i>添加新角色(大)</span></a>
+						</div>
+						<div class="fyt-tree-footer">
+							<a id="signs" href="javascript:void(0)"><span><i class="fa fa-plus" title="添加新角色"></i>添加新角色(小)</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- table begin -->
+			<div showCollapseButton="true" class="fyt-if-right">
+				<div class="fyt-toolbar">
+					<div class="fyt-toolbar-nowrap">
+						<div class="btn-group" role="group" aria-label="...">
+							<button type="button" class="btn btn-default">添加</button>
+							<button type="button" class="btn btn-default">删除</button>
+							<button type="button" class="btn btn-default">刷新</button>
+						</div>
+						<form class="form-inline">
+                            <div class="form-group">
+                                <label class="control-label" for="inputInlineUsername">用户名：</label>
+                                <input type="text" class="form-control" id="unames" name="unames" placeholder="用户名" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="inputInlinePassword">密码：</label>
+                                <input type="password" class="form-control" id="inputInlinePassword" name="inputPassword" placeholder="密码" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="inputInlinePassword">下拉选择：</label>
+                                <select class="form-control">
+                                    <option>选项 1</option>
+                                    <option>选项 2</option>
+                                    <option>选项 3</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox-custom checkbox-default">
+                                    <input type="checkbox" id="inputInlineRemember" name="inputCheckboxRemember" checked="" autocomplete="off">
+                                    <label for="inputInlineRemember">自动登录</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary btn-outline">搜索</button>
+                            </div>
+                        </form>
+					</div>
+				</div>
+				<div id="datagrids" class="mini-datagrid" style="width: 100%;" url="deptTree.txt" idField="ID" showPagerButtonText="true" multiSelect="true" allowAlternating="true" sizeList="[20,30,50,100,200,500,1000,5000,10000]" pageSize="20" showEmptyText="true" emptyText="暂无数据">
+					<div property="columns">
+						<div type="checkcolumn"></div>
+						<div field="Title" width="150" headerAlign="left" allowSort="true" renderer="showInfo">投票主题</div>
+						<div field="VoteSum" width="80" headerAlign="left" allowSort="true">已投数</div>
+						<div field="ItemSum" width="120" headerAlign="left" allowSort="true">投票选项数</div>
+						<div field="VoteType" width="60" headerAlign="left" allowSort="true">投票类型</div>
+						<div field="IsTime" width="60" headerAlign="left" allowSort="true">启用时间限制</div>
+						<div width="60" headerAlign="left" allowSort="false" renderer="actionInfo">操作</div>
+					</div>
+				</div>
+				<!-- table end -->
+			</div>
+		</div>
+		<script type="text/javascript">
+			mini.parse();
+			var grid = mini.get("datagrids");
+			grid.load();
+			$(function(){
+				$("#unames").click(function(){
+					laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})
+				});
+				$(".fyt-tree ul li").hover(function(){
+					$(this).find('div').stop(true,false).show();
+				},function(){
+					$(this).find('div').stop(true,false).hide();
+				});
+				//弹框测试
+				$("#tows").click(function(){
+					dig.Open("大","large.html","800px", "510px");
+				});
+				//弹框测试 小
+				$("#signs").click(function(){ 
+					dig.Open("小","small.html","750px", "500px");
+				});
+			});
+		</script>
+	</body>
+
+</html>

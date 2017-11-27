@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>飞易腾后台管理系统</title>
+		<link rel="stylesheet" href="wwwroot/lib/css/bootstrap.min.css" />	    
+	    <link rel="stylesheet" href="wwwroot/lib/css/font-awesome.min.css">
+	    <link rel="stylesheet" href="wwwroot/lib/css/jquery-accordion-menu.css" />
+	    <link rel="stylesheet" href="wwwroot/lib/css/style-tab.css" />
+	    <link rel="stylesheet" href="wwwroot/lib/css/toastr.css" />
+	    <link rel="stylesheet" href="wwwroot/lib/css/style.css" />
+	</head>
+	<body style="overflow: hidden;">
+		<!-- 头部开始 -->
+	    <div class="soa-in-header clearfix">
+	        <div class="soa-in-tleft">
+	            <div class="soa-w225 soa-h50 soa-title">飞易腾后台管理系统</div>
+	        </div>
+	        <div class="soa-in-main">
+	            <div class="soa-h50 soa-top-nav">
+	                <div class="soa-tabs-wall">
+	                    <div class="soa-tabs-header">
+	                        <div class="soa-tabs-scroller-left"></div>
+	                        <div class="soa-tabs-scroller-right"></div>
+	                        <div class="soa-tabs-wrap">
+	                           <a href="javascript:void(0)" class="mem-close"><i class="fa fa-bars"></i></a>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- end -->
+	                <div class="soa-h50 soa-top-rmenu">
+	                    <ul>
+	                    	<li class="log-user">
+	                    		<a href="javascript:void(0)"><img src="wwwroot/lib/img/user01.png" /><span>feiyit-超级管理员</span></a>
+	                    		<!-- 快捷方式 -->
+	                            <div class="soa-user-down">
+	                            	<div class="user-set-item"><a href=""><i class="fa fa-cog"></i>基本资料</a></div>
+	                            	<div class="user-set-item"><a href=""><i class="fa fa-edit"></i>修改密码</a></div>
+	                            	<div class="user-set-item"><a href=""><i class="fa fa-eraser"></i>清除缓存</a></div>
+	                            	<div class="user-set-item"><a href=""><i class="fa fa-sign-in"></i>退出</a></div>
+	                            </div>
+	                    	</li>
+	                    	
+	                    	<li><a href="javascript:void(0)" class="clearCache"><i class="fa fa-eraser"></i>　清除缓存</a></li>
+	                        <li class="sel-site">
+	                        	<a href="javascript:void(0)"><i class="fa fa-cubes"></i>　飞易腾官网2017<b></b></a>
+	                        	<!-- 快捷方式 -->
+	                            <div class="soa-user-down">
+	                            	<div class="sel-site-item"><a href=""><i class="fa fa-cube"></i>飞易腾官网2017</a></div>
+	                            	<div class="sel-site-item"><a href=""><i class="fa fa-cube"></i>飞易腾2017英文网站</a></div>
+	                            	<div class="no-site"><i class="fa fa-frown-o"></i>没有其它站点了</div>
+	                            </div>
+	                        </li>
+	                        <li><span class="shu"></span></li>
+	                        <li id="li-mess">
+	                            <a href="javascript:void(0)"><img src="wwwroot/lib/img/inmore.png" />　消息</a>
+	                            <!-- 快捷方式 -->
+	                            <div class="soa-user-down">
+	                            	<div class="drop-notific-title clearfix"><span>你有<strong>3</strong>条提醒</span><a href="javascript:void(0)">全部</a></div>
+	                            	<div class="fyt-drop-notific clearfix">
+	                            		<a href="javascript:void(0)" class="fyt-ellipsis">有6笔新的销售订单</a><span>2017-07-30</span>
+	                            	</div>
+	                            	<div class="fyt-drop-notific clearfix">
+	                            		<a href="javascript:void(0)" class="fyt-ellipsis">有3个来自人事部的消息部的消息部的消息</a><span>2017-07-30</span>
+	                            	</div>
+	                            	<div class="fyt-drop-notific clearfix">
+	                            		<a href="javascript:void(0)" class="fyt-ellipsis">上午开会记录存档</a><span>2017-07-30</span>
+	                            	</div>	                            	
+	                                <div class="mess-info"><a href=""><i class="fa fa-envelope"></i> 您有0条未读消息</a></div>
+	                            </div>
+	                        </li>
+	                        <li class="log-exit"><a href="javascript:void(0)" class="login_exit"><i class="fa fa-sign-in"></i></a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+		
+		 <!-- 头部结束 -->
+		<div class="container-fluid" id="content">
+			<div class="soa-wal-content">
+	            <div class="soa-main" id="content_wrapper">
+	                
+	            </div>
+	        </div>
+	         <div class="soa-l-fixed">	         	
+	            <div class="soa-l-menu">
+	            	<!-- begin -->
+	            	<div id="jquery-accordion-menu" class="jquery-accordion-menu red sidebar">
+						<div class="jquery-accordion-menu-header" id="form"></div>
+						<ul id="demo-list" class="sidebar-menu">	
+						   	<li class="active"><a class="multitabs" href="default.html" data-iframe="true"><i class="fa fa-clipboard"></i>我的工作台 </a></li>
+							<li><a class="multitabs" href="list.html" data-iframe="true"><i class="fa fa-glass"></i>内容管理平台 </a></li>
+							<li><a class="multitabs" href="form.html" data-iframe="true"><i class="fa fa-file-image-o"></i>功能组件 </a><span class="jquery-accordion-menu-label">
+								12 </span></li>
+							<li><a href="#"><i class="fa fa-cog"></i>会员管理 </a>
+								<ul class="submenu">
+									<li><a class="multitabs" href="http://qq.com">Web Design </a></li>
+									<li><a class="multitabs" href="c.html" data-iframe="true">Hosting </a></li>
+									<li><a href="#">Design </a>
+										<ul class="submenu">
+											<li><a href="#">Graphics </a></li>
+											<li><a href="#">Vectors </a></li>
+											<li><a href="#">Photoshop </a></li>
+											<li><a href="#">Fonts </a></li>
+										</ul>
+									</li>
+									<li><a href="#">Consulting </a></li>
+								</ul>
+							</li>
+							<li><a href="article.html" class="multitabs" data-iframe="true"><i class="fa fa-home"></i>系统管理 </a></li>
+							<li><a href="#"><i class="fa fa-suitcase"></i>问答管理 </a>
+								<ul class="submenu">
+									<li><a href="#">Web Design </a></li>
+									<li><a href="#">Graphics </a><span class="jquery-accordion-menu-label">10 </span>
+									</li>
+									<li><a href="#">Photoshop </a></li>
+									<li><a href="#">Programming </a></li>
+								</ul>
+							</li>
+							<li><a href="search.html" class="multitabs" data-iframe="true"><i class="fa fa-user"></i>关于我们 </a></li>
+							<li><a href="#"><i class="fa fa-envelope"></i>联系我们 </a></li>
+						   
+						</ul>
+					</div>
+	            	<!-- end -->
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="wwwroot/lib/js/jquery.min.js"></script>	    
+	    <script type="text/javascript" src="wwwroot/lib/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/multitabs.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/jquery-accordion-menu.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/toastr.min.js"></script>
+		<script type="text/javascript" src="wwwroot/layer/layer.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/index.js"></script>
+	</body>
+</html>

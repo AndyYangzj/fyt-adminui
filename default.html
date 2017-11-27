@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="wwwroot/lib/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="wwwroot/lib/css/font-awesome.min.css">
+		<link rel="stylesheet" href="wwwroot/lib/css/toastr.css" />
+		<link rel="stylesheet" href="wwwroot/lib/css/style.css" />
+		<title></title>
+		<style>
+			body {
+				background-color: #f5f6f7;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="fyt-container">
+			<div class="defa-tab">
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active">
+						<a href="#home" aria-controls="home" role="tab" data-toggle="tab">商城默认页</a>
+					</li>
+					<li role="presentation">
+						<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">网站默认页</a>
+					</li>
+				</ul>
+			</div>
+			<!-- Tab panes -->
+			<div class="tab-content fyt-tab-content">
+				<div role="tabpanel" class="tab-pane active" id="home">
+					<!-- 商城 begin -->
+					<div class="row defa-shop-top">
+						<div class="col-lg-3 col-sm-6 col-xs-12 info-panel">
+							<div class="widget">
+								<ul class="defa-o-tj">
+									<li>
+										<div class="defa-order"><span><i class="fa fa-cart-plus"></i></span></div>
+										<div class="defa-order-sum">
+											<strong>¥ 0.00</strong>
+											<p>今日订单金额（元）</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6 col-xs-12 info-panel">
+							<div class="widget">
+								<ul class="defa-o-tj">
+									<li>
+										<div class="defa-order red"><span><i class="fa fa-bar-chart"></i></span></div>
+										<div class="defa-order-sum">
+											<strong>10条</strong>
+											<p>今日成交订单数</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6 col-xs-12 info-panel">
+							<div class="widget">
+								<ul class="defa-o-tj">
+									<li>
+										<div class="defa-order lv"><span><i class="fa fa-male"></i></span></div>
+										<div class="defa-order-sum">
+											<strong>15位</strong>
+											<p>今日新增会员</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6 col-xs-12 info-panel">
+							<div class="widget">
+								<ul class="defa-o-tj">
+									<li>
+										<div class="defa-order lan"><span><i class="fa fa-comments-o"></i></span></div>
+										<div class="defa-order-sum">
+											<strong>8条</strong>
+											<p>留言/评论</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 fyt-panel">
+							<div class="widget">
+								<div class="bsbl-a">
+									<h2><i class="fa fa-calculator"></i>待处理事务</h2>
+								</div>
+								<div class="bsbl-b">
+									<ul>
+										<li>
+											<p>待发货订单<span>0 条</span></p>
+										</li>
+										<li>
+											<p>会员提现<span>2 条</span></p>
+										</li>
+										<li>
+											<p>站内信<span>0 条</span></p>
+										</li>
+										<li>
+											<p>商品咨询<span>0 条</span></p>
+										</li>
+										<li>
+											<p>已达到警戒库存商品<span>1 条</span></p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 fyt-panel">
+							<div class="widget">
+								<div class="bsbl-a">
+									<h2><i class="fa fa-pie-chart lv"></i>信息统计</h2>
+								</div>
+								<div class="bsbr-b">
+									<ul>
+										<li>
+											<h2>6 位</h2>
+											<p>会员总数</p>
+										</li>
+										<li>
+											<h2>31 条</h2>
+											<p>商品总数</p>
+										</li>
+										<li style="border-bottom: 0;">
+											<h2>¥ 0.00</h2>
+											<p>预付款总额</p>
+										</li>
+										<li style="border-bottom: 0;">
+											<h2>¥ 160.00</h2>
+											<p>近30天订单金额</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-ms-12 col-xs-12 col-md-12 fyt-panel">
+							<div class="widget">
+								<div class="bsbl-a">
+									<h2><i class="fa fa-paper-plane"></i>常用功能</h2>
+								</div>
+								<div class="bsbl-c">
+									<ul class="clearfix">
+										<li>
+											<a href="/shopadmin/workspace/index">
+												<i class="fa fa-cubes"></i><br> 商品管理
+											</a>
+										</li>
+										<li>
+											<a href="/shopadmin/swgoodsorder/index">
+												<i class="fa fa-database" style="color: #3f87f3;"></i><br> 订单列表
+											</a>
+										</li>
+										<li>
+											<a href="/memadmin/memlist/index">
+												<i class="fa fa-male" style="color: #7266ba;"></i><br> 会员管理
+											</a>
+										</li>
+										<li>
+											<a href="/fytadmin/sysarticle/index">
+												<i class="fa fa-list" style="color: #24c249;"></i><br> 文章管理
+											</a>
+										</li>
+										<li>
+											<a href="/shopadmin/swgoodsorder/ordercount">
+												<i class="fa fa-bar-chart"></i><br> 销售统计
+											</a>
+										</li>
+										<li>
+											<a href="/fytadmin/sysadv/index">
+												<i class="fa fa-image" style="color: #fbd41f;"></i><br> 广告管理
+											</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-ms-12 col-xs-12 col-md-12 fyt-panel">
+							<div class="widget">
+								<div class="bsbl-a">
+									<h2><i class="fa fa-paper-plane"></i>近30天销售额走势</h2>
+								</div>
+								<div id="qz_container_month" style="height:350px;"></div>
+							</div>
+						</div>
+					</div>
+					<!-- 商城 end -->
+				</div>
+				<div role="tabpanel" class="tab-pane" id="profile">
+					<!-- 企业站 begin -->
+					<div class="media account-info">
+						<div class="media-left">
+							<div class="avatar avatar-online">
+								<img src="wwwroot/lib/img/user01.png" alt="715515390@qq.com">
+								<i class="avatar avatar-busy"></i>
+							</div>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">欢迎您，Tylands<small>超级管理员</small></h4>
+							<p>
+								<i class="icon icon-color wb-bell" aria-hidden="true"></i> 这是您第 3688 次登录，上次登录日期：2017-7-20 14:54:26，详细信息请查看
+								<a data-pjax="" href="/account/log" target="_blank">日志</a>
+								，如果不是您本人登录，请及时
+								<a data-pjax="" href="/account/password" target="_blank">修改密码</a>
+								。
+							</p>
+						</div>
+					</div>
+					<div class="alert alert-info" role="alert"><i class="fa fa-desktop"></i> <strong class="f14">当前站点：飞易腾官网2017 <i class="im-arrow-right5"></i> <a href="/FytAdmin/SysSite/Index">(管理)</a></strong></div>
+					<div class="alert alert-warning alea-if mt10">
+						<i class="fa fa-question-circle"></i> 当前版本：FytSoa Version 4.0 官方最新版本：V4.0 最后更新时间：2017-07-20<br>
+						<br> 系统说明： 本系统是北京飞易腾科技有限公司独立开发，授权予 xxx客户 使用！
+					</div>					
+					<!-- 企业站 end -->
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="wwwroot/lib/js/jquery.min.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/toastr.min.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/echarts-all.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/echarts-macarons.js"></script>
+		<script type="text/javascript">
+			var myChart_month = echarts.init(document.getElementById("qz_container_month"), e_macarons);
+			//按月统计
+			var option_year = {
+				tooltip: {
+					trigger: 'axis',
+					show: true
+				},
+				toolbox: {
+					show: true,
+					feature: {
+						mark: {
+							show: true
+						},
+						dataView: {
+							show: true,
+							readOnly: false
+						},
+						magicType: {
+							show: true,
+							type: ['line', 'bar']
+						},
+						restore: {
+							show: true
+						},
+						saveAsImage: {
+							show: true
+						}
+					}
+				},
+				legend: {
+					data: ['订单数']
+				},
+				calculable: true,
+				xAxis: [{
+					type: 'category',
+					data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+				}],
+				yAxis: [{
+					type: 'value'
+				}],
+				series: [{
+					"name": "订单数",
+					"type": "line",
+					"data": [0, 0, 2, 0, 0, 0, 22, 0, 0, 0, 0, 0],
+					markPoint: {
+						data: [{
+								type: 'max',
+								name: 'Max'
+							},
+							{
+								type: 'min',
+								name: 'Min'
+							}
+						]
+					},
+					markLine: {
+						data: [{
+							type: 'average',
+							name: 'Avg'
+						}]
+					}
+				}]
+			};
+			myChart_month.setOption(option_year);
+		</script>
+	</body>
+
+</html>

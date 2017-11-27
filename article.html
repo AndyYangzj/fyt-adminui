@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="wwwroot/lib/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="wwwroot/lib/css/font-awesome.min.css">
+		<link rel="stylesheet" href="wwwroot/lib/css/toastr.css" />
+		<link href="wwwroot/table/miniui/themes/default/miniui.css" rel="stylesheet" type="text/css">
+		<link href="wwwroot/table/miniui/themes/pure/skin.css" rel="stylesheet" type="text/css">
+		<link href="wwwroot/table/miniui/themes/icons.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="wwwroot/treeview/bootstrap-treeview.css" />
+		<link rel="stylesheet" href="wwwroot/lib/css/style.css" />
+		<title></title>
+		<script type="text/javascript" src="wwwroot/lib/js/jquery.min.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/toastr.min.js"></script>
+		<script type="text/javascript" src="wwwroot/treeview/bootstrap-treeview.min.js"></script>
+		<script type="text/javascript" src="wwwroot/table/miniui/miniui.js"></script>
+		<script type="text/javascript" src="wwwroot/layer/layer.js"></script>
+		<script type="text/javascript" src="wwwroot/slimscroll/jquery.slimscroll.min.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/fyt-comment.js"></script>
+	</head>
+
+	<body>
+		<div id="layout1" class="mini-layout" style="width: 100%; height: 100%;">
+			<div showHeader="false" region="west" width="210" maxWidth="250" minWidth="180">
+				<div class="fyt-toolbar">
+					<div class="input-search">
+						<input type="search" class="form-control" id="inputSearchable" placeholder="Search ...">
+						<button type="submit" class="input-search-btn">
+                                        <i class="fa fa-search-minus" aria-hidden="true"></i>
+                                    </button>
+					</div>
+				</div>
+				<div class="tree-scroll">
+					<div id="tree"></div>
+				</div>
+
+			</div>
+			<div title="center" region="center" bodyStyle="overflow:hidden;">
+				<iframe src="form.html" id="articleframe" name="articleframe" frameborder="0" style="width: 100%; height: 100%;" border="0"></iframe>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			var tree = [{
+					text: "APP栏目管理",
+					nodes: [{
+							text: "关于我们",
+							nodes: [{
+									text: "联系我们联系我们联系我们"
+								},
+								{
+									text: "企业荣誉"
+								}
+							]
+						},
+						{
+							text: "积分说明"
+						}
+					]
+				},
+				{
+					text: "电脑端管理"
+				},
+				{
+					text: "产品管理"
+				},
+				{
+					text: "留言管理"
+				},				
+				{
+					text: "下载管理"
+				}
+			];
+			var initSelectableTree = function() {
+				return $('#tree').treeview({
+					data: tree,
+					onNodeSelected: function(event, data) {
+						//这里处理去iframe页面
+					}
+				});
+			}
+			var $selectableTree = initSelectableTree();
+			
+			var findSelectableNodes = function() {
+				return $selectableTree.treeview('search', [$('#inputSearchable').val(), {
+					ignoreCase: false,
+					exactMatch: false
+				}]);
+			};
+			var selectableNodes = findSelectableNodes();
+			$('#inputSearchable').on('keyup', function(e) {
+				selectableNodes = findSelectableNodes();
+			});
+
+			/*mini.parse();
+					    var tree = mini.get("systree");
+					    var iframe = document.getElementById("articleframe");
+					    tree.on("nodeselect", function (e) {
+					        if(e.node.TempId!=2)
+					            iframe.src = e.node.TempUrl + e.node.ID;
+					        else
+					            iframe.src = e.node.TempUrl +"?classId="+ e.node.ID;
+					    });*/
+
+			$(function() {
+				$(".fyt-tree ul li").hover(function() {
+					$(this).find('div').stop(true, false).show();
+				}, function() {
+					$(this).find('div').stop(true, false).hide();
+				});
+				memScroll();
+				$(window).resize(function() {
+					memScroll();
+				});
+			});
+			function memScroll(){
+				var winH=$(window).height();
+				$('.tree-scroll').slimScroll({
+					size: '5px',
+					color:"#76838f",
+			        height: (winH-100)+'px'
+			    });
+			}
+		</script>
+	</body>
+
+</html>

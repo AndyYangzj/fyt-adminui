@@ -1,0 +1,13 @@
+({"total":31,"maxAge":37,"avgAge":27.1935,"minAge":24,"data":[
+{"ID":"1","Title":"这里面是测试数据","VoteSum":10,"ItemSum":5,"VoteType":"多选","IsTime":"2017-06-03"},
+{"ID":"1","Title":"这里面是测试数据","VoteSum":10,"ItemSum":5,"VoteType":"多选","IsTime":"2017-06-03"},
+{"ID":"1","Title":"这里面是测试数据","VoteSum":10,"ItemSum":5,"VoteType":"多选","IsTime":"2017-06-03"},
+{"ID":"1","Title":"这里面是测试数据","VoteSum":10,"ItemSum":5,"VoteType":"多选","IsTime":"2017-06-03"},
+{"ID":"1","Title":"这里面是测试数据","VoteSum":10,"ItemSum":5,"VoteType":"多选","IsTime":"2017-06-03"},
+{"ID":"1","Title":"这里面是测试数据","VoteSum":10,"ItemSum":5,"VoteType":"多选","IsTime":"2017-06-03"},
+{"ID":"1","Title":"这里面是测试数据","VoteSum":10,"ItemSum":5,"VoteType":"多选","IsTime":"2017-06-03"},
+{"ID":"1","Title":"这里面是测试数据","VoteSum":10,"ItemSum":5,"VoteType":"多选","IsTime":"2017-06-03"},
+{"ID":"1","Title":"这里面是测试数据","VoteSum":10,"ItemSum":5,"VoteType":"多选","IsTime":"2017-06-03"},
+{"ID":"1","Title":"这里面是测试数据","VoteSum":10,"ItemSum":5,"VoteType":"多选","IsTime":"2017-06-03"},
+{"ID":"1","Title":"这里面是测试数据","VoteSum":10,"ItemSum":5,"VoteType":"多选","IsTime":"2017-06-03"}
+]})

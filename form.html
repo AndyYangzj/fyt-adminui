@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="wwwroot/lib/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="wwwroot/lib/css/font-awesome.min.css">
+		<link rel="stylesheet" href="wwwroot/select/select2.css" />
+		<link rel="stylesheet" href="wwwroot/lib/css/toastr.css" />
+		<link rel="stylesheet" href="wwwroot/lib/css/style.css" />		
+		<script type="text/javascript" src="wwwroot/lib/js/jquery.min.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/toastr.min.js"></script>	
+		<script type="text/javascript" src="wwwroot/layer/layer.js"></script>	
+		<title></title>
+	</head>
+
+	<body>
+		<div class="defa-tab">
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active">
+					<a href="#home" aria-controls="home" role="tab" data-toggle="tab">商城默认页</a>
+				</li>
+				<li role="presentation">
+					<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">网站默认页</a>
+				</li>
+			</ul>
+		</div>
+		<form id="forms" class="form-horizontal">
+			<!-- Tab panes -->
+			<div class="tab-content fyt-tab-content">
+				<div role="tabpanel" class="tab-pane active" id="home">
+					<div class="col-sm-12 col-md-6">
+						<div class="form-group">
+							<label class="col-sm-3 control-label">您的姓名：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" name="name" placeholder="姓名" autocomplete="off" required="required" maxlength="8">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">您的性别：</label>
+							<div class="col-sm-9">
+								<div class="radio-custom radio-default radio-inline">
+									<input type="radio" id="inputHorizontalMale" name="sex">
+									<label for="inputHorizontalMale">男</label>
+								</div>
+								<div class="radio-custom radio-default radio-inline">
+									<input type="radio" id="inputHorizontalFemale" name="sex" checked="">
+									<label for="inputHorizontalFemale">女</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">您喜欢什么：</label>
+							<div class="col-sm-9">
+								<div class="input-group">
+									<div class="checkbox-custom checkbox-default checkbox-inline">
+										<input type="checkbox" id="inputHorizontalMale" value="1" name="like" required="required">
+										<label for="inputHorizontalMale">花</label>
+									</div>
+									<div class="checkbox-custom checkbox-default checkbox-inline">
+										<input type="checkbox" id="inputHorizontalFemale" value="2" name="like">
+										<label for="inputHorizontalFemale">动物</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">您的标签：</label>
+							<div class="col-sm-9">
+								<select id="testselect" class="form-control" multiple data-plugin="select2">
+                                    <optgroup label="A 字母开头">
+                                        <option value="AC BMW">A AC宝马</option>
+                                        <option value="Aston Martin">A 阿斯顿马丁</option>
+                                        <option value="Audi">A 奥迪</option>
+                                    </optgroup>
+                                    <optgroup label="B 字母开头">
+                                        <option value="Brabus">B 巴博斯</option>
+                                        <option value="Porsche">B 保时捷</option>
+                                        <option value="Po Chun">B 宝骏</option>
+                                        <option value="BMW">B 宝马</option>
+                                        <option value="Beijing">B 北京汽车</option>
+                                        <option value="BAW">B 北汽制造</option>
+                                        <option value="Benz">B 奔驰</option>
+                                    </optgroup>
+                                </select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">您的标签：</label>
+							<div class="col-sm-9">
+								<select id="testselects" class="form-control js-states" data-plugin="select2">
+                                    <option value="Brabus">B 巴博斯</option>
+                                        <option value="Porsche">B 保时捷</option>
+                                        <option value="Po Chun">B 宝骏</option>
+                                        <option value="BMW">B 宝马</option>
+                                        <option value="Beijing">B 北京汽车</option>
+                                        <option value="BAW">B 北汽制造</option>
+                                        <option value="Benz">B 奔驰</option>
+                                </select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">您的简介：</label>
+							<div class="col-sm-9">
+								<textarea class="form-control" placeholder="简介" required="required"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="profile">b</div>
+			</div>
+			<!-- Tab panes end -->
+			<div class="fyt-foot-submit">
+				<button class="btn btn-block btn-success btn-save">确定保存</button>
+	            <button type="button" class="btn btn-block btn-info btn-back">取消返回</button>
+	        </div>
+		</form>
+		<script type="text/javascript" src="wwwroot/lib/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/messages_zh.js"></script>
+		<script type="text/javascript" src="wwwroot/select/select2.full.min.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/fyt-comment.js"></script>
+		<script type="text/javascript">		
+			$(function(){
+				$("#testselect").select2();$("#testselects").select2();
+				$("#forms").validate({
+					errorPlacement: function(error, element) {
+						if (element.is(":radio")){							
+							error.appendTo(element.parents(".col-sm-9"));
+						}
+						else if (element.is(":checkbox")){
+							error.appendTo(element.parents(".col-sm-9"));
+						}else{							
+							error.appendTo(element.parent());
+						}
+					},
+					submitHandler: function() {
+						alert("abc");
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>

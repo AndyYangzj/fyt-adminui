@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="wwwroot/lib/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="wwwroot/lib/css/font-awesome.min.css">
+		<link rel="stylesheet" href="wwwroot/select/select2.css" />
+		<link rel="stylesheet" href="wwwroot/lib/css/toastr.css" />
+		<link rel="stylesheet" href="wwwroot/lib/css/style.css" />
+		<script type="text/javascript" src="wwwroot/lib/js/jquery.min.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/toastr.min.js"></script>
+		<script type="text/javascript" src="wwwroot/layer/layer.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/fyt-comment.js"></script>
+		<title></title>
+	</head>
+
+	<body>
+		<div class="fyt-forms">
+			<form id="forms" class="form-horizontal tow-inline">
+				<div class="form-inline">
+					<div class="form-group">
+						<label class="control-label" for="inputInlineUsername">登录帐号[*]：</label>
+						<input type="text" class="form-control" id="inputInlineUsername" name="inputUsername" required="" placeholder="" autocomplete="off">
+					</div>
+					<div class="form-group">
+						<label class="control-label" for="inputInlineUsername">登录密码[*]：</label>
+						<input type="text" class="form-control" id="inputInlineUsername" name="inputUsername" placeholder="" autocomplete="off">
+					</div>
+				</div>
+				<div class="form-inline">
+					<div class="form-group">
+						<label class="control-label" for="inputInlineUsername">归属角色：</label>
+						<input type="text" class="form-control" id="inputInlineUsername" name="inputUsername" placeholder="" autocomplete="off">
+					</div>
+					<div class="form-group">
+						<label class="control-label" for="inputInlineUsername">工号[*]：</label>
+						<input type="text" class="form-control" id="inputInlineUsername" name="inputUsername" placeholder="" autocomplete="off">
+					</div>
+				</div>
+				<div class="form-inline">
+					<div class="form-group">
+						<label class="control-label" for="inputInlineUsername">姓名[*]：</label>
+						<input type="text" class="form-control" id="inputInlineUsername" name="inputUsername" placeholder="" autocomplete="off">
+					</div>
+					<div class="form-group">
+						<label class="control-label" for="inputInlineUsername">电子邮箱[*]：</label>
+						<input type="text" class="form-control" id="inputInlineUsername" name="inputUsername" placeholder="" autocomplete="off">
+					</div>
+				</div>
+				<div class="form-inline">
+					<div class="form-group">
+						<label class="control-label" for="inputInlineUsername">姓名[*]：</label>
+						<select id="testselects" class="form-control js-states" data-plugin="select2">
+							<option value="Brabus">B 巴博斯</option>
+							<option value="Porsche">B 保时捷</option>
+							<option value="Po Chun">B 宝骏</option>
+							<option value="BMW">B 宝马</option>
+							<option value="Beijing">B 北京汽车</option>
+							<option value="BAW">B 北汽制造</option>
+							<option value="Benz">B 奔驰</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label class="control-label" for="inputInlineUsername">电子邮箱[*]：</label>
+						<input type="checkbox" id="inputHorizontalFemale" value="2" name="like"><tt>这里面是提示</tt>
+					</div>
+				</div>				
+				<div class="form-inline">
+					<div class="form-group">
+						<label class="control-label" for="inputInlineUsername">广告位宽度：</label>
+						<input type="text" class="form-control" id="inputInlineUsername" name="inputUsername" placeholder="" autocomplete="off">
+					</div>
+					<div class="form-group">
+						<label class="control-label" for="inputInlineUsername">广告位高度：</label>
+						<input type="text" class="form-control" id="inputInlineUsername" name="inputUsername" placeholder="" autocomplete="off">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-3 control-label label-rad-cbk">您的性别：</label>
+					<div class="col-sm-9">
+						<div class="radio-custom radio-default radio-inline">
+							<input type="radio" id="inputHorizontalMale" name="sex">
+							<label for="inputHorizontalMale">男</label>
+						</div>
+						<div class="radio-custom radio-default radio-inline">
+							<input type="radio" id="inputHorizontalFemale" name="sex" checked="">
+							<label for="inputHorizontalFemale">女</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label label-text">您的姓名：</label>
+					<div class="col-sm-9">
+						<textarea class="form-control" placeholder="简介" required="required"></textarea>
+					</div>
+				</div>
+				<div class="fyt-foot-submit">
+					<button class="btn btn-block btn-success btn-save">确定保存</button>
+					<button type="button" class="btn btn-block btn-info btn-dig-close">取消返回</button>
+				</div>
+			</form>
+		</div>
+		<script type="text/javascript" src="wwwroot/lib/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="wwwroot/lib/js/messages_zh.js"></script>
+		<script type="text/javascript" src="wwwroot/select/select2.full.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#testselect").select2();
+				$("#testselects").select2();
+				$("#forms").validate({
+					/*errorPlacement: function(error, element) {
+						$( element ).closest( "form" ).find( ".col-sm-9" ).append( error );
+					},*/
+					submitHandler: function() {
+						alert("abc");
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>

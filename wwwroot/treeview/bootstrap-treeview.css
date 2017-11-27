@@ -1,0 +1,15 @@
+.treeview-box{padding:12px;background-color:#fff;border:1px solid #e4eaec;border-radius:3px}
+.treeview .list-group-item{cursor:pointer}
+.treeview .list-group-item:not(.node-selected):focus,.treeview .list-group-item:not(.node-selected):hover
+{color:#62a8ea;background-color:#f3f7f9}
+.treeview .list-group-item:not(.node-selected):focus>.node-icon,.treeview .list-group-item:not(.node-selected):hover>.node-icon
+{color:#62a8ea}.treeview span.indent{margin-right:10px;margin-left:10px}
+.treeview span.icon{width:12px;margin-right:8px; color: #96a5aa;}
+.treeview .node-disabled{color:silver;cursor:not-allowed}
+.treeview .list-group-item:first-child,.treeview .list-group-item:last-child{border-radius: 0px;}
+.treeview .list-group-item{border: 1px solid #e4eaec;border-right: none; border-left: 0px;padding: 8px 15px;font-size:13px;
+overflow:hidden; text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:1; }
+.treeview .list-group-item.node-selected{ background-color: #62a8ea !important; }
+.treeview .list-group-item.node-selected span.icon{ color: #FFFFFF;}
+.treeview .list-group-item.search-result{ color: #666666 !important;}
+.treeview .list-group-item.node-selected.search-result{color: #FFFFFF !important;}

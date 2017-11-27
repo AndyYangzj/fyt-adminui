@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- 移动设备 viewport -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+		<!-- 360浏览器默认使用Webkit内核 -->
+		<meta name="renderer" content="webkit">
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<link rel="stylesheet" href="wwwroot/lib/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="wwwroot/lib/css/login.css" />
+	</head>
+
+	<body class="log-body">
+		<div class="login-form">
+			<div class="title">
+				<img src="wwwroot/lib/img/logo.jpg" /><span>后台管理系统</span>
+			</div>
+			<div class="login-box">
+				<form action="index.html" method="get" id="loginform">
+					<div class="form-inline">
+						<div class="form-inline-font">
+							<span class="glyphicon glyphicon-user"></span>
+						</div>
+						<div class="form-inline-input clearfix">
+							<input type="text" id="loginname" name="loginname" value="" placeholder="请输入用户名" required="required" maxlength="8" class="fyt-txt" />
+						</div>
+					</div>
+					<div class="form-inline">
+						<div class="form-inline-font">
+							<span class="glyphicon glyphicon-lock"></span>
+						</div>
+						<div class="form-inline-input clearfix">
+							<input type="password" id="password" name="password" placeholder="请输入密码" required="required" maxlength="16" class="fyt-txt" />
+						</div>
+					</div>
+					<div class="form-inline inline-code">
+						<div class="form-inline-font">
+							<span class="glyphicon glyphicon-send"></span>
+						</div>
+						<div class="form-inline-input">
+							<div class="code-box" id="code-box">
+								<input type="text" id="code" name="code" placeholder="向右滑动完成验证" class="code-input" />
+								<p></p>
+								<small id="box-tip">向右滑动完成验证</small>
+								<span>>>></span>
+							</div>
+						</div>
+					</div>
+					<div class="login-btn">
+						<div class="user-btn-link">
+							<!--<a href="">密码找回</a>	moveCode('4664');-->
+						</div>
+						<button type="submit">登录</button>
+					</div>
+				</form>
+				<p class="log-footer"> Copyright 2011 - 2016　<a href="https://www.feiyit.com" target="_blank">feiyit.com</a></p>
+			</div>
+
+		</div>
+	</body>
+	<script type="text/javascript" src="wwwroot/lib/js/jquery.min.js"></script>
+	<script type="text/javascript" src="wwwroot/lib/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="wwwroot/lib/js/messages_zh.js"></script>	
+	<script type="text/javascript" src="wwwroot/lib/js/login.js"></script>	
+
+</html>
